@@ -74,7 +74,7 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-plugins=(git ruby osx bundler brew rails emoji-clock)
+#plugins=(git ruby osx bundler brew rails emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
 
