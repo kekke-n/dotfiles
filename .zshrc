@@ -7,6 +7,7 @@ export MANPATH=/opt/local/man:$MANPATH
 
 #Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
+export ZSH_CUSTOM=~/.zsh
 
 # Go language
 export PATH=$PATH:/usr/local/go/bin
@@ -19,7 +20,8 @@ export EDITOR="vim"
 
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="wedisagree"
-ZSH_THEME="theunraveler"
+#ZSH_THEME="theunraveler"
+ZSH_THEME="my_wedisagree"
 
 autoload -Uz vcs_info
 setopt prompt_subst
