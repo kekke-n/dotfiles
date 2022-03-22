@@ -117,6 +117,8 @@ alias cm="git symbolic-ref --short HEAD | sed -e 's/_/ /g' | sed -e 's/.*\///g'"
 alias cmp="git symbolic-ref --short HEAD | sed -e 's/_/ /g' | sed -e 's/.*\///g' | tr -d '\n' |pbcopy"
 alias cmcm="git commit -a -m '`cm`'"
 
+alias be="bundle exe"
+
 function gcbh() {
   command git checkout -b hotfix/$1 origin/master
 }
