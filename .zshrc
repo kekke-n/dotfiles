@@ -19,9 +19,9 @@ export EDITOR="vim"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="wedisagree"
+ZSH_THEME="wedisagree"
 #ZSH_THEME="theunraveler"
-ZSH_THEME="my_wedisagree"
+#ZSH_THEME="my_wedisagree"
 
 autoload -Uz vcs_info
 setopt prompt_subst
