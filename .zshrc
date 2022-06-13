@@ -19,7 +19,11 @@ export EDITOR="vim"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="wedisagree"
+#ZSH_THEME="wedisagree"
+#ZSH_THEME="af-magic"
+#ZSH_THEME="simple"
+ZSH_THEME="clean"
+
 #ZSH_THEME="theunraveler"
 #ZSH_THEME="my_wedisagree"
 
