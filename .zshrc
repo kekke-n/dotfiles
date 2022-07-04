@@ -22,7 +22,8 @@ export EDITOR="vim"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="af-magic"
 #ZSH_THEME="simple"
-ZSH_THEME="clean"
+#ZSH_THEME="clean"
+ZSH_THEME="mrtazz"
 
 #ZSH_THEME="theunraveler"
 #ZSH_THEME="my_wedisagree"
@@ -83,7 +84,6 @@ plugins=(git)
 #plugins=(git ruby osx bundler brew rails emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
