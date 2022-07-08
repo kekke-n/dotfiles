@@ -132,6 +132,19 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 
+# gh checkout pr search
+# https://fromatom.hatenablog.com/entry/2020/03/31/135410
+function peco-checkout-pull-request () {
+    local selected_pr_id=$(gh pr list | peco | awk '{ print $1 }')
+    if [ -n "$selected_pr_id" ]; then
+        BUFFER="gh pr checkout ${selected_pr_id}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-checkout-pull-request
+bindkey "^g^p" peco-checkout-pull-request
+
 # local setting
 [ -f ~/.zshrc_local ] && . ~/.zshrc_local
 
