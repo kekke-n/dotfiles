@@ -12,5 +12,6 @@ ln -sf ~/dotfiles/.zsh/themes ~/.zsh
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.zshrc_local ~/.zshrc_local
 
-# irb
+# ruby
 ln -sf ~/dotfiles/.irbrc ~/.irbrc
+ln -sf ~/dotfiles/.pryrc ~/.pryrc
