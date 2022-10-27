@@ -145,6 +145,18 @@ function peco-checkout-pull-request () {
 zle -N peco-checkout-pull-request
 bindkey "^g^p" peco-checkout-pull-request
 
+# history
+function peco-select-history() {
+    BUFFER=$(history 1 | sort -k1,1nr | perl -ne 'BEGIN { my @lines = (); } s/^\s    *\d+\*?\s*//; $in=$_; if (!(grep {$in eq $_} @lines)) { push(@lines, $in); print     $in; }' | peco --query "$LBUFFER")
+    CURSOR=${#BUFFER}
+    zle reset-prompt
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
 # local setting
 [ -f ~/.zshrc_local ] && . ~/.zshrc_local
+
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
