@@ -1,3 +1,7 @@
+# 8. あたらしくインストールされたコマンドを即認識させる
+# https://zenn.dev/sprout2000/articles/bd1fac2f3f83bc
+zstyle ":completion:*:commands" rehash 1
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH:/sbin/:/usr/local/sbin:$PATH
 
@@ -169,3 +173,9 @@ bindkey '^r' peco-select-history
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  autoload -Uz compinit && compinit
+fi
