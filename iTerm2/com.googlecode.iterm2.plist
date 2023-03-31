@@ -4,16 +4,6 @@
 <dict>
 	<key>AlternateMouseScroll</key>
 	<true/>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>iceberg</key>
@@ -245,6 +235,8 @@
 	<integer>524576</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>Mark Alert Action</key>
+	<string>Post Notification</string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -811,7 +803,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Log Directory</key>
-			<string>/Users/k.nakama/log/iterm</string>
+			<string>/Users/keisuke.nakama/log/iterm</string>
 			<key>Minimum Contrast</key>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
@@ -2076,7 +2068,7 @@
 				</dict>
 			</dict>
 			<key>Log Directory</key>
-			<string>/Users/k.nakama/log/iterm</string>
+			<string>/Users/keisuke.nakama/log/iterm</string>
 			<key>Minimum Contrast</key>
 			<real>0.0</real>
 			<key>Mouse Reporting</key>
@@ -2093,6 +2085,8 @@
 			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
+			<key>Plain Text Logging</key>
+			<false/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>

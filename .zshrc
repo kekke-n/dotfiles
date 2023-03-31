@@ -127,6 +127,7 @@ alias cmcm="git commit -a -m '`cm`'"
 
 alias be="bundle exe"
 alias irbn="irb --noprompt"
+alias rspec-dry="bundle exec rspec -f d --dry-run --order defined"
 
 function gcbh() {
   command git checkout -b hotfix/$1 origin/master
