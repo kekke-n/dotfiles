@@ -138,6 +138,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 
+# nodenv setting
+eval "$(nodenv init -)"
+
 # gh checkout pr search
 # https://fromatom.hatenablog.com/entry/2020/03/31/135410
 function peco-checkout-pull-request () {
@@ -186,3 +189,11 @@ if type brew &>/dev/null; then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   autoload -Uz compinit && compinit
 fi
+
+alias ctags="`brew --prefix`/bin/ctags"
+
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+
+
+

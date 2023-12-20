@@ -62,7 +62,8 @@ set whichwrap=b,s,h,l,<,>,[,]
 " 構文毎に文字色を変化させる
 syntax on
 " カラースキーマの指定
-colorscheme desert
+set background=dark
+" colorscheme railscasts
 " colorscheme molokai
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
@@ -78,4 +79,20 @@ set nostartofline
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype on
+
+nnoremap sh :belowright :terminal<CR>a
+nnoremap <C-`> :belowright :terminal<CR>
+
+
+nnoremap <C-]> g<C-]>
+
+set tags=./tags;,tags;
+
+
+call plug#begin()
+  Plug 'preservim/nerdtree'
+call plug#end()
+
+nnoremap <C-t> :NERDTreeToggle<CR>
+
 
