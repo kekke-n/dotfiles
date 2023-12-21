@@ -77,6 +77,10 @@ set synmaxcol=200
 " G押下時にカラム位置を保持
 set nostartofline
 
+" 現在のカーソル位置をハイライト
+:set cursorline
+:set cursorcolumn
+
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype on
 
