@@ -41,6 +41,8 @@ export EDITOR="vim"
 #precmd () { vcs_info }
 #RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
+# Pureプロンプト
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 
@@ -123,19 +125,10 @@ alias dc='docker-compose'
 alias de='docker exec -it'
 alias da='docker attach'
 
-alias cm="git symbolic-ref --short HEAD | sed -e 's/_/ /g' | sed -e 's/.*\///g'"
-alias cmp="git symbolic-ref --short HEAD | sed -e 's/_/ /g' | sed -e 's/.*\///g' | tr -d '\n' |pbcopy"
-alias cmcm="git commit -a -m '`cm`'"
-
 alias be="bundle exe"
 alias irbn="irb --noprompt"
 alias rspec-dry="bundle exec rspec -f d --dry-run --order defined"
-
-function gcbh() {
-  command git checkout -b hotfix/$1 origin/master
-}
-
-# rbenv setting
+#rbenv setting
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
@@ -155,15 +148,6 @@ function peco-checkout-pull-request () {
 }
 zle -N peco-checkout-pull-request
 bindkey "^g^p" peco-checkout-pull-request
-
-# history
-#function peco-select-history() {
-#    BUFFER=$(history 1 | sort -k1,1nr | perl -ne 'BEGIN { my @lines = (); } s/^\s    *\d+\*?\s*//; $in=$_; if (!(grep {$in eq $_} @lines)) { push(@lines, $in); print     $in; }' | peco --query "$LBUFFER")
-#    CURSOR=${#BUFFER}
-#    zle reset-prompt
-#}
-#zle -N peco-select-history
-#bindkey '^r' peco-select-history
 
 # ctrl + r で過去に実行したコマンドを選択できるようにする。
 function peco-select-history() {

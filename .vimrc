@@ -77,10 +77,6 @@ set synmaxcol=200
 set nostartofline
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
-filetype on
-
-nnoremap sh :belowright :terminal<CR>a
-nnoremap <C-`> :belowright :terminal<CR>
 
 
 nnoremap <C-]> g<C-]>
@@ -90,8 +86,24 @@ set tags=./tags;,tags;
 
 call plug#begin()
   Plug 'preservim/nerdtree'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-`> :terminal<CR>
+" fzf settings
+let $FZF_DEFAULT_OPTS="--layout=reverse"
+let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'border': 'sharp' } }
 
+let mapleader = "\<Space>"
+
+" fzf
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>g :GFiles<CR>
+nnoremap <silent> <leader>G :GFiles?<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>h :History<CR>
+nnoremap <silent> <leader>r :Rg<CR>
 
