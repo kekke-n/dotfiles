@@ -31,8 +31,6 @@ set browsedir=buffer
 set smartcase
 " 検索結果をハイライト表示する
 set hlsearch
-" 暗い背景色に合わせた配色にする
-set background=dark
 " タブ入力を複数の空白入力に置き換える
 set expandtab
 " 検索ワードの最初の文字を入力した時点で検索を開始する
@@ -65,6 +63,7 @@ syntax on
 set background=dark
 " colorscheme railscasts
 " colorscheme molokai
+colorscheme iceberg
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
 " 勝手に改行するのを防ぐ

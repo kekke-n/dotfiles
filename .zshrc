@@ -27,20 +27,23 @@ export EDITOR="vim"
 #ZSH_THEME="af-magic"
 #ZSH_THEME="simple"
 #ZSH_THEME="clean"
-ZSH_THEME="mrtazz"
+#ZSH_THEME="mrtazz"
 
 #ZSH_THEME="theunraveler"
 #ZSH_THEME="my_wedisagree"
 
-autoload -Uz vcs_info
-setopt prompt_subst
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () { vcs_info }
-RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+#autoload -Uz vcs_info
+#setopt prompt_subst
+#zstyle ':vcs_info:git:*' check-for-changes true
+#zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+#zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+#zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+#zstyle ':vcs_info:*' actionformats '[%b|%a]'
+#precmd () { vcs_info }
+#RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+
+autoload -U promptinit; promptinit
+prompt pure
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
