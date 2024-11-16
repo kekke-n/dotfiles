@@ -28,7 +28,6 @@ export EDITOR="vim"
 #ZSH_THEME="simple"
 #ZSH_THEME="clean"
 #ZSH_THEME="mrtazz"
-
 #ZSH_THEME="theunraveler"
 #ZSH_THEME="my_wedisagree"
 
