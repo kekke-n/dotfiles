@@ -91,7 +91,7 @@ call plug#begin()
 call plug#end()
 
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-`> :terminal<CR>
+nnoremap <C-`> :bo terminal<CR>
 " fzf settings
 let $FZF_DEFAULT_OPTS="--layout=reverse"
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
