@@ -4,7 +4,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # vim
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 mkdir ~/.vim
-ln -sf ~/dotfiles/.vim/colors ~/.vim
+ln -sf ~/dotfiles/.vim/colors ~/.vim/colors
 
 # zsh
 mkdir ~/.zsh
