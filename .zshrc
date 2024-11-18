@@ -180,3 +180,6 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 alias zshrc="vim ~/.zshrc"
 alias vimrc="vim ~/.vimrc"
+
+# fzf
+source <(fzf --zsh)

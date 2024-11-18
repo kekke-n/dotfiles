@@ -90,6 +90,7 @@ call plug#begin()
   Plug 'junegunn/fzf.vim'
 call plug#end()
 
+nnoremap zz :update<cr>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-`> :bo terminal<CR>
 " fzf settings
@@ -106,3 +107,4 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>h :History<CR>
 "nnoremap <silent> <leader>g :GFiles<CR>
 "nnoremap <silent> <leader>G :GFiles?<CR>
+
