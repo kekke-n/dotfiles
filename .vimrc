@@ -102,9 +102,18 @@ let mapleader = "\<Space>"
 
 " fzf
 nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <leader>g :Rg<CR>
+nnoremap <silent> <leader>r :Rg<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>h :History<CR>
-"nnoremap <silent> <leader>g :GFiles<CR>
-"nnoremap <silent> <leader>G :GFiles?<CR>
+nnoremap <silent> <leader>g :GFiles<CR>
+nnoremap <silent> <leader>G :GFiles?<CR>
+
+"vim-fugitive
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gc :Gcommit<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gb :Gblame<CR>
 
