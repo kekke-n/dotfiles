@@ -83,7 +83,7 @@ nnoremap <C-]> g<C-]>
 
 set tags=./tags;,tags;
 
-
+" :PlugInstall
 call plug#begin()
   Plug 'preservim/nerdtree'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -118,5 +118,6 @@ nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gl :Git log<CR>
 nnoremap <leader>glo :Git log --oneline<CR>
-nnoremap <leader>gb :Git blamee<CR>
+nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gh :GBrowse<CR>
+nnoremap <leader>pi :PlugInstall<CR>
