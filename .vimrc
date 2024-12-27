@@ -1,4 +1,4 @@
-""""""""""""""""""""""""""""""
+" """"""""""""""""""""""""""""
 " 各種オプションの設定
 """"""""""""""""""""""""""""""
 " タグファイルの指定(でもタグジャンプは使ったことがない)
@@ -104,11 +104,11 @@ let mapleader = "\<Space>"
 
 " fzf
 nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <leader>r :Rg<CR>
+nnoremap <silent> <leader>g :Rg<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>h :History<CR>
-nnoremap <silent> <leader>g :GFiles<CR>
-nnoremap <silent> <leader>G :GFiles?<CR>
+nnoremap <silent> <leader>F :GFiles<CR>
+nnoremap <silent> <leader>s :GFiles?<CR>
 
 "vim-fugitive
 nnoremap <leader>ga :Git add %:p<CR><CR>
@@ -121,3 +121,16 @@ nnoremap <leader>glo :Git log --oneline<CR>
 nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gh :GBrowse<CR>
 nnoremap <leader>pi :PlugInstall<CR>
+
+function! FzfTagsCurrentWord()
+  let l:word = expand('<cword>')
+  let l:list = taglist(l:word)
+  if len(l:list) == 1
+    execute ':tag ' . l:word
+  else
+    call fzf#vim#tags(l:word)
+  endif
+endfunction
+
+noremap <c-]> :call FzfTagsCurrentWord()<cr>
+

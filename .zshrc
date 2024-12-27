@@ -196,3 +196,8 @@ rfv() {
 }
 zle -N rfv
 bindkey '^g' rfv
+
+# fzfのALT-Cを使うための設定
+bindkey "ç" fzf-cd-widget
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
+
