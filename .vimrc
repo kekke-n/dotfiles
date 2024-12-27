@@ -122,15 +122,10 @@ nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gh :GBrowse<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 
-"function! FzfTagsCurrentWord()
-"  let l:word = expand('<cword>')
-"  let l:list = taglist(l:word)
-"  if len(l:list) == 1
-"    execute ':tag ' . l:word
-"  else
-"    call fzf#vim#tags(l:word)
-"  endif
-"endfunction
-"
-"noremap <c-]> :call FzfTagsCurrentWord()<cr>
-"
+
+" カーソルがあたっている単語をrigpregするコマンド
+" ref.https://github.com/junegunn/fzf.vim/issues/50#issuecomment-1839554251
+nnoremap <silent>+ :call fzf#vim#grep(
+  \ "rg --column --line-number --no-heading --color=always --smart-case -- "
+  \ . fzf#shellescape('\b'.expand('<cword>').'\b'),
+  \ fzf#vim#with_preview(), 0)<cr>
