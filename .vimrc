@@ -1,4 +1,4 @@
-" """"""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
 " 各種オプションの設定
 """"""""""""""""""""""""""""""
 " タグファイルの指定(でもタグジャンプは使ったことがない)
@@ -122,15 +122,15 @@ nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gh :GBrowse<CR>
 nnoremap <leader>pi :PlugInstall<CR>
 
-function! FzfTagsCurrentWord()
-  let l:word = expand('<cword>')
-  let l:list = taglist(l:word)
-  if len(l:list) == 1
-    execute ':tag ' . l:word
-  else
-    call fzf#vim#tags(l:word)
-  endif
-endfunction
-
-noremap <c-]> :call FzfTagsCurrentWord()<cr>
-
+#function! FzfTagsCurrentWord()
+#  let l:word = expand('<cword>')
+#  let l:list = taglist(l:word)
+#  if len(l:list) == 1
+#    execute ':tag ' . l:word
+#  else
+#    call fzf#vim#tags(l:word)
+#  endif
+#endfunction
+#
+#noremap <c-]> :call FzfTagsCurrentWord()<cr>
+#
