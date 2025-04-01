@@ -201,3 +201,6 @@ bindkey '^g' rfv
 bindkey "ç" fzf-cd-widget
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 
+alias gcob='(){git checkout -b  $1 upstream/$2}'
+
+
