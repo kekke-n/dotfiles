@@ -2,7 +2,11 @@
     "window.commandCenter": 1,
     "workbench.colorTheme": "Cursor Dark Midnight",
     "editor.inlineSuggest.suppressSuggestions": true,
+    "accessibility.verbosity.keybindingsEditor": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
     "[vue]": {
         "editor.defaultFormatter": "Vue.volar"
     }
+
 }
